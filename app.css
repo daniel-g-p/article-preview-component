@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+html {
+    font: 400 16px/1.5 'Manrope', sans-serif;
+    color: hsl(214, 17%, 51%);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(210, 46%, 95%);
+}
+
+main {
+    width: 60%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+    box-shadow: 0 0 5rem hsl(210, 46%, 85%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+#drawers {
+    background-image: url("drawers.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 45%;
+}
+
+#content {
+    width: 55%;
+    padding: 3em;
+}
+
+h1 {
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+h2 {
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
+h3 {
+    letter-spacing: 4px;
+    color: hsl(214, 17%, 51%);
+    margin-left: 0.5rem;
+    margin-right: -0.5rem;
+}
+
+h1,
+#description {
+    margin-bottom: 1.5rem;
+}
+
+aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#profile img {
+    width: 48px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.button {
+    margin-left: 0.75rem;
+    background-color: hsl(210, 46%, 95%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.25s ease;
+    flex-shrink: 0;
+}
+
+.button svg {
+    width: 20px;
+}
+
+.button path {
+    fill: hsl(214, 17%, 51%);
+    stroke: none;
+    transition: fill 0.25s ease;
+}
+
+.button:hover {
+    background-color: hsl(214, 17%, 51%);
+    transition: background-color 0.25s ease;
+    cursor: pointer;
+}
+
+.button:hover path {
+    fill: hsl(210, 46%, 95%);
+    transition: fill 0.25s ease;
+}
+
+#shareTab {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 22px;
+    position: absolute;
+    margin-bottom: 10rem;
+    background-image: url("share-tab.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 98px;
+}
+
+#shareTab:hover {
+    cursor: initial;
+}
+
+#shareTab svg {
+    height: 24px;
+    margin: 0 0.5rem;
+    transition: transform 0.25s ease;
+}
+
+#shareTab path {
+    fill: hsl(210, 46%, 95%);
+    stroke: none;
+    transition: fill 0.25s ease;
+}
+
+#shareTab svg:hover path {
+    fill: hsl(210, 46%, 100%);
+    transition: fill 0.25s ease;
+}
+
+#shareTab svg:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.25s ease;
+}
+
+.loading {
+    transform: translateY(0.5rem);
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+
+.loaded {
+    opacity: 1;
+    transition: all 0.25s ease;
+}
+
+.sharing {
+    background-color: hsl(214, 17%, 51%);
+    transition: background-color 0.25s ease;
+}
+
+.sharing path {
+    fill: hsl(210, 46%, 95%);
+    stroke: none;
+}
+
+@media (max-width: 1200px) {
+    main {
+        width: 75%;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    body {
+        height: auto;
+    }
+    main {
+        flex-direction: column;
+        margin: 7.5% 0;
+        width: 85%;
+    }
+    h1 {
+        font-size: 1.25rem;
+        margin-top: 1.75rem;
+    }
+    h1,
+    #description {
+        padding: 0.75rem 1.5rem;
+        margin: 0;
+    }
+    h3 {
+        padding: 0;
+        margin: 0 0.5rem 0 0;
+    }
+    #drawers {
+        width: 100%;
+        height: 360px;
+    }
+    #content {
+        width: 100%;
+        padding: 0.75rem 0 0 0;
+    }
+    aside {
+        margin-top: 0.75rem;
+        padding: 1.5rem;
+        height: 6rem;
+        justify-content: space-between;
+        transition: background-color 0.25s ease;
+    }
+    .button {
+        width: 36px;
+        height: 36px;
+    }
+    .sharingMobile {
+        background-color: hsl(217, 19%, 35%);
+        transition: background-color 0.25s ease;
+    }
+    #shareTab {
+        background-image: none;
+        position: static;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        height: auto;
+    }
+    #shareTab svg {
+        height: 20px;
+    }
+}
